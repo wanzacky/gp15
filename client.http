@@ -1,0 +1,102 @@
+####### User Login
+POST http://localhost:4000/Userlogin
+Content-Type: application/json
+
+{
+  "Username": "Wan",
+  "Password": "1234"
+}
+
+####### User Registration
+POST http://localhost:4000/Usersregister
+Content-Type: application/json
+
+{
+  "Username": "Wan",
+  "Password": "1234",
+  "name": "Ridhwan",
+  "email": "wan@example.com"
+}
+
+####### Create Visit
+POST http://localhost:4000/Addvisitor
+Content-Type: application/json
+
+{
+  "visitorName": "Ridhwan",
+  "gender": "Male",
+  "citizenship": "Malaysia",
+  "visitorAddress": "no 31 jalan puaka, selangor",
+  "phoneNo": "012454647",
+  "vehicleNo": "ABC123",
+  "UserId": "kuroo1234",
+  "visitDate": "2024-01-06",
+  "purpose": "Sightseeing"
+}
+
+######## Edit Visitor (Update)
+PATCH http://localhost:4000/EditVisitor/65993e55518930bd92adc9e1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDQ1NDcxNDAsImV4cCI6MTcwNDU1MDc0MH0.RKNs6Nrev_iPSYVQ4o97wPtWwERjPvbR6NN-crQAmrk
+
+{
+  "visitorName": "Anis",
+  "gender": "Female",
+  "citizenship": "Korea",
+  "visitorAddress": "456 New St",
+  "phoneNo": "0142464274",
+  "vehicleNo": "XYZ789",
+  "UserId": "nis4567",
+  "visitDate": "2024-01-07",
+  "purpose": "Tour"
+}
+
+######## Delete Visit
+DELETE http://localhost:4000/deletevisitor/6599342dac346636ffebfb50
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDQ1NDY2NzEsImV4cCI6MTcwNDU1MDI3MX0.5XuSnADqxbvDsO7IKz8JA2aI5K0OiAcdMFmw6NwLjZY
+
+######## Get Visit Details
+GET http://localhost:4000/visitorinfo
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MDQ1NDM5NTcsImV4cCI6MTcwNDU0NzU1N30.xmQfCSl-YIcPH9yQ5w5pf9qn2xOeSLLwJl-Zx9YCh2s
+
+######## Register Security
+POST http://localhost:4000/register-security
+Content-Type: application/json
+
+{
+  "Username": "SecurityGuard",
+  "Password": "454746",
+  "name": "Safwan",
+  "email": "safwan@example.com"
+}
+
+######## Login Security
+POST http://localhost:4000/login-Security
+Content-Type: application/json
+
+{
+  "Username": "SecurityGuard",
+  "Password": "454746"
+}
+
+######## Register Admin
+POST http://localhost:4000/register-admin
+Content-Type: application/json
+
+{
+  "Username": "Hazeem",
+  "Password": "jimjim",
+  "name": "Fahmi",
+  "email": "Fahmi@example.com"
+}
+
+######## Login Admin
+POST http://localhost:4000/login-Admin
+Content-Type: application/json
+
+{
+  "Username": "Hazeem",
+  "Password": "jimjim"
+}
